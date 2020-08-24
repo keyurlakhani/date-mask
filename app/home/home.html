@@ -1,0 +1,9 @@
+<h3>{{title}}</h3>
+<form name="$f" ng-submit="$ctrl.onSubmit()">
+  <fieldset>
+    <div>
+      <label for="">Date</label>
+      <input type="text" placeholder="MM/DD/YYYY" ng-model="value.dob" date-input-mask>
+    </div>
+  </fieldset>
+</form>
