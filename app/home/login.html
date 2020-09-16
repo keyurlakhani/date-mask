@@ -1,0 +1,18 @@
+<div class="login-form-container">
+    <form name="f" ng-submit="ctrl.onSubmit(f)">
+      <p>
+        <label for="id_username">Username</label>
+        <input type="text" name="username" username-validator required>
+      </p>
+      <p *ngIf="f.username.error.usernamePattern">Username not valid</p>
+      <p>
+        <label for="id_password">Password</label>
+        <input type="password" name="password" password-validator required>
+      </p>
+      <p *ngIf="f.password.error.passwordPattern">Password not valid</p>
+      <p *ngIf="f.password.error.sequentialOrSame">sequential or same letters or numbers not allowed</p>
+      <p>
+        <button type="submit">Login</button>
+      </p>
+    </form>
+  </div>
